@@ -9,44 +9,29 @@
 
 var quizArray = [
     {
-        "Question": "Commonly used data types DO NOT include:",
-        "Response1": "1. strings",
-        "Response2": "2. booleans",
-        "Response3": "3. alerts",
-        "Response4": "4. numbers",
-        "Correct": "3"
+        question: "Commonly used data types DO NOT include:",
+        responses: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+        correct: "3"
     },
     {
-        "Question": "The condition in an if / else statement is enclosed with _____.",
-        "Response1": "1. quotes",
-        "Response2": "2. curly braces",
-        "Response3": "3. parentheses",
-        "Response4": "4. square brackets",
-        "Correct": "3"
+        question: "The condition in an if / else statement is enclosed with _____.",
+        responses: ["1. quotes", "2. curly braces", "3. parentheses", "4. square brackets"],
+        correct: "3"
     },
     {
-        "Question": "Arrays in JavaScript can be used to store _____.",
-        "Response1": "1. numbers and strings",
-        "Response2": "2. other arrays",
-        "Response3": "3. booleans",
-        "Response4": "4. all of the above",
-        "Correct": "4"
+        question: "Arrays in JavaScript can be used to store _____.",
+        responses: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
+        correct: "4"
     },
     {
-        "Question": "String values must be enclosed within _____ when being assigned to variables.",
-        "Response1": "1. commas",
-        "Response2": "2. curly braces",
-        "Response3": "3. quotes",
-        "Response4": "4. parentheses",
-        "Correct": "3"
+        question: "String values must be enclosed within _____ when being assigned to variables.",
+        responses: ["1. commas", "2. curly braces", "3. quotes", "4. parentheses"],
+        correct: "3"
     },
     {
-        "Question": "A very useful tool used during development and debugging for printing content to the debugger is:",
-        "Response1": "1. JavaScript",
-        "Response2": "2. terminal/bash",
-        "Response3": "3. for loops",
-        "Response4": "4. console.log",
-        "Correct": "4"
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        response: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log"],
+        correct: "4"
     }
 ];
 
