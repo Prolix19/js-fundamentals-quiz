@@ -6,3 +6,56 @@ Coloring buttons purple and rounding the edges
 Final score/enter initials form, high scores table
 Horizontal rule and "Correct!"/"Wrong!" feedback after answering a question
 */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 20px 35px;
+}
+/* 
+header h2 {
+    display: inline;
+} */
+
+#scores {
+    display: inline;
+    float: left;
+    /* height: 10vw;
+    padding: 50px; */
+}
+
+#timer {
+    float: right;
+}
+
+#quizarea {
+    text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+    padding-top: 50px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 32px;
+}
+
+.btn {
+    background-color: #4B3570;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    border: #4B3570;
+    border-radius: 12px;
+    padding: 12px 24px;
+    margin: 12px;
+}

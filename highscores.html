@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz High Scores</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- Add code for:
@@ -12,5 +13,22 @@
         Button to "go back" to index.html
         Button to clear high score history (local storage)
     -->
+    <main>
+        <section class="highscorestitle">
+            <h1>High scores</h1>
+        </section>
+        <section class="highscoresdisplay">
+            <ul class="highscoreslist">
+            </ul>
+        </section>
+        <section class="highscoresbuttons">
+            <a href="./index.html">
+                <button class="btn" id="gobackbutton" type="button">Go Back</button>
+            </a>
+            <button class="btn" id="clearhighscoresbutton" type="button">Clear high scores</button>
+        </section>
+    </main>
+
+    <script src="./assets/js/highscores.js"></script>
 </body>
 </html>
