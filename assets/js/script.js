@@ -27,13 +27,14 @@ var quizArray = [
     }
 ];
 
+var headerElement = document.querySelector("#head");
+var quizHTML = document.querySelector("#quizarea");
+
 var quizTimer = 75;
 
 var startQuizButton = document.querySelector("#startquizbutton");
 
 var timerElement = document.querySelector("#timer");
-
-var quizHTML = document.querySelector("#quizarea");
 
 var answerButton1 = document.createElement("button");
 answerButton1.setAttribute("type", "button");
