@@ -1,12 +1,4 @@
-// Add code to:
-// Start a countdown timer from 75 seconds when "Start Quiz" button is clicked
-// Parse click events on each answer, evaluating correct/incorrect, applying time penalty if incorrect, loading next question or quiz end as appropriate, providing feedback on last response.
-// Handle form to submit final score and initials
-// Throw high score data into local storage
-// Your score = time remaining
-// Penalty is -10 seconds from time remaining per incorrect answer
-// Five questions, multiple choice with four answers apiece
-
+// Creating array of quiz question & answer objects
 var quizArray = [
     {
         question: "Commonly used data types DO NOT include:",
@@ -43,10 +35,29 @@ var timerElement = document.querySelector("#timer");
 
 var quizHTML = document.querySelector("#quizarea");
 
-var highScore = {
-    initials: "ABC",
-    score: "19"
-};
+var answerButton1 = document.createElement("button");
+answerButton1.setAttribute("type", "button");
+answerButton1.setAttribute("class", "btn");
+answerButton1.setAttribute("id", "btn0");
+answerButton1.setAttribute("data-num", "1");
+
+var answerButton2 = document.createElement("button");
+answerButton2.setAttribute("type", "button");
+answerButton2.setAttribute("class", "btn");
+answerButton2.setAttribute("id", "btn1");
+answerButton1.setAttribute("data-num", "2");
+
+var answerButton3 = document.createElement("button");
+answerButton3.setAttribute("type", "button");
+answerButton3.setAttribute("class", "btn");
+answerButton3.setAttribute("id", "btn2");
+answerButton1.setAttribute("data-num", "3");
+
+var answerButton4 = document.createElement("button");
+answerButton4.setAttribute("type", "button");
+answerButton4.setAttribute("class", "btn");
+answerButton4.setAttribute("id", "btn3");
+answerButton1.setAttribute("data-num", "4");
 
 function countdown() {
     var timeInterval = setInterval(function () {
@@ -62,46 +73,25 @@ function countdown() {
     }, 1000);
   }
 
-// function countdown() {
-//     var updateTimer = setInterval(function() {
-//         // if (quizTimer > 0) {
-//         //     timerElement.textContent = "Time: " + quizTimer;
-//         //     quizTimer--;
-//         // } else {
-//         //     timerElement.textContent = "Time: 0";
-//         // }
-//         while(quizTimer > 0) {
-//             timerElement.textContent = "Time: " + quizTimer;
-//             quizTimer--;
-//         }
 
-//         clearInterval(updateTimer);
-//     }, 1000);
-// }
-
-// var presentQuestion = function(int) {
-//     quizHTML.innerHTML = "<h1>" + quizArray[int].Question + "</h1><button class='btn' type='button' id='1' data-num='1'>" + quizArray[int].Response1 + "</button><br/><button class='btn' type='button' id='2' data-num='2'>" + quizArray[int].Response2 + "</button><br/><button class='btn' type='button' id='3' data-num='3'>" + quizArray[int].Response3 + "</button><br/><button class='btn' type='button' id='4' data-num='4'>" + quizArray[int].Response4;
-// }
-
-var startQuiz = function() {
+var startQuiz = function(event) {
+    event.preventDefault;
     countdown();
-    // for (var i = 0; i < quizArray.length; i++) {
-    //     presentQuestion(i);
-    // }
-    quizHTML.innerHTML = "<h1>" + quizArray[0].Question + "</h1><button class='btn' type='button' id='1' data-num='1'>" + quizArray[0].Response1 + "</button><br/><button class='btn' type='button' id='2' data-num='2'>" + quizArray[0].Response2 + "</button><br/><button class='btn' type='button' id='3' data-num='3'>" + quizArray[0].Response3 + "</button><br/><button class='btn' type='button' id='4' data-num='4'>" + quizArray[0].Response4;
-    // var btn1 = document.querySelector("#1");
-    // var btn2 = document.querySelector("#2");
-    // var btn3 = document.querySelector("#3");
-    // var btn4 = document.querySelector("#4");
-    // quizHTML.addEventListener('click', event => {
-    //     if (event.target.id === "1") {
-    //         alert("1");
-    //     }
-    // });
-    // btn1.addEventListener("click", alert("1"));
-    // btn2.addEventListener("click", alert("2"));
-    // btn3.addEventListener("click", alert("3"));
-    // btn4.addEventListener("click", alert("4"));
+    var currentQuestion = 0;
+    quizHTML.innerHTML = "<h1>" + quizArray[currentQuestion].question + "</h1>";
+    quizHTML.appendChild()
+    function showAnswers() {
+        var question = quizArray[currentQuestion];
+        var answers = createEle
+    }
+
+
+    function createElement(element, type, value, text) {
+        var tmp = document.createElement(element);
+        tmp.setAttribute(type, value);
+        tmp.textContent = text;
+        return tmp;
+    };
 }
 
 startQuizButton.addEventListener("click", startQuiz);

@@ -1,34 +1,25 @@
+<!-- Begin with the usual tags -- thanks, Emmet! -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz High Scores</title>
+    <!-- Relatively unique title, plus pulling in styles -->
+    <title>JavaScript Fundamentals Quiz High Scores</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <!-- Add code for:
-        Unordered list that will hold high scores from local storage
-        Button to "go back" to index.html
-        Button to clear high score history (local storage)
-    -->
+
+    <!-- JS will create most of the HTML -->
     <main>
-        <section class="highscorestitle">
-            <h1>High scores</h1>
-        </section>
-        <section class="highscoresdisplay">
-            <ol class="highscoreslist">
-            </ol>
-        </section>
-        <section class="highscoresbuttons">
-            <a href="./index.html">
-                <button class="btn" id="gobackbutton" type="button">Go Back</button>
-            </a>
-            <button class="btn" id="clearhighscoresbutton" type="button">Clear high scores</button>
+        <section id="highscoresarea">
+
         </section>
     </main>
 
+    <!-- Pulling in JavaScript-->
     <script src="./assets/js/highscores.js"></script>
 </body>
 </html>

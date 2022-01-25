@@ -1,21 +1,50 @@
-// Add code to:
-// - Parse local storage and display the objects in a high scores table
-// - Go back button to reload index.html
-// - Clear local storage when a "Clear high scores" button is clicked
+// Setup variables and build out heading, ordered list for high scores
+var section = document.getElementById("highscoresarea")
 
-var sampleHighScore = {
-    ABC: 19
-};
+var header = document.createElement("h1")
+header.textContent = "High scores"
+section.appendChild(header);
 
-localStorage.setItem("scores", JSON.stringify(sampleHighScore));
+var olElement = document.createElement("ol")
+olElement.setAttribute("id", "scores")
+section.appendChild(olElement);
+var list = document.getElementById("scores");
 
-var scoresList = document.querySelector(".highscoreslist");
+// Add any stored scores to the list
+var highScoreList = JSON.parse(localStorage.getItem("scores"));
 
-var clearScores = document.querySelector("#clearhighscoresbutton");
+if (highScoreList == null) {
+    highScoreList = [];
+} else {
+    for (var i = 0; i < highScoreList.length; i++) {
+        var scoreItem = document.createElement("li");
+        scoreItem.setAttribute("id", i);
+        scoreItem.textContent = highScoreList[i].initials + ": " + highScoreList[i].score
+        list.appendChild(scoreItem);
+    }
+}
 
-scoresList.innerHTML = "<li>" + localStorage.getItem("scores") + "</li>";
+// Set up buttons and then add listeners to navigate back home or clear the list & stored scores
+var backBtn = document.createElement("button");
+backBtn.setAttribute("class", "btn");
+backBtn.setAttribute("id", "goback");
+backBtn.textContent = "Go Back"
+document.getElementById("highscoresarea").appendChild(backBtn);
 
-clearScores.addEventListener("click", function() {
+var clearBtn = document.createElement("button");
+clearBtn.setAttribute("class", "btn");
+clearBtn.setAttribute("id", "clear");
+clearBtn.textContent = "Clear List"
+document.getElementById("highscoresarea").appendChild(clearBtn);
+
+document.getElementById("goback").addEventListener("click", function () {
+    location.href = "index.html";
+});
+
+document.getElementById("clear").addEventListener("click", function () {
+    olElement.innerHTML = "";
+    // while (list.firstChild) {
+    //     list.removeChild(list.firstChild);
+    // }
     localStorage.clear();
-    scoresList.innerHTML = "";
 });

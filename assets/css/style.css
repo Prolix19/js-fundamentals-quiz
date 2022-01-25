@@ -1,33 +1,22 @@
-/*
-Add styles for:
-High score and timer in header (top-left and top-right, respectively
-H1 for "Coding Quiz Challenge" title, questions, and "High Scores"
-Coloring buttons purple and rounding the edges
-Final score/enter initials form, high scores table
-Horizontal rule and "Correct!"/"Wrong!" feedback after answering a question
-*/
+/* Styles for all tags */
 * {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Remove decoration from anchor tags to better match the mock-up */
 a {
     text-decoration: none;
 }
 
+/* Below are some various styles that pad, align, float, etc. various tags to better fit the mock-up */
 header {
     padding: 20px 35px;
 }
-/* 
-header h2 {
-    display: inline;
-} */
 
 #scores {
     display: inline;
     float: left;
-    /* height: 10vw;
-    padding: 50px; */
 }
 
 #timer {
@@ -48,6 +37,7 @@ p {
     font-size: 32px;
 }
 
+/* Styling for all buttons. Included the same purple color from the mock-up */
 .btn {
     background-color: #4B3570;
     text-decoration: none;
