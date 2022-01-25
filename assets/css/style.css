@@ -14,31 +14,14 @@ header {
     padding: 20px 35px;
 }
 
-#scores {
-    display: inline;
-    float: left;
-}
-
-#timer {
-    float: right;
-}
-
-#quizarea {
-    text-align: center;
-}
-
 h1 {
     font-size: 64px;
     padding-top: 50px;
     margin-bottom: 5px;
 }
 
-p {
-    font-size: 32px;
-}
-
-/* Styling for all buttons. Included the same purple color from the mock-up */
-.btn {
+/* Styling for MOST buttons. Included the same purple color from the mock-up */
+button {
     background-color: #4B3570;
     text-decoration: none;
     color: white;
@@ -48,4 +31,59 @@ p {
     border-radius: 12px;
     padding: 12px 24px;
     margin: 12px;
+}
+
+/* Override styling on the "View high scores" button */
+#highScoresBtn {
+    color: rgb(100, 0, 140);
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    float: left;
+}
+
+/* Adding some more styling for the new HTML */
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 42px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #999999;
+    text-align: left;
+}
+
+hr {
+    color: #CACACA;
+    width: 99%;
+}
+
+main {
+    width: 1100px;
+    margin: auto;
+}
+
+p, label, input {
+    font-size: 32px;
+}
+
+.quizPage {
+    position: relative;
+    text-align: left;
+}
+
+#timerDisplay {
+    float: right;
+    font-size: 24px;
+}
+
+#intro {
+    text-align: center;
+}
+
+#highscoreList {
+    background-color: #D9D3E9;
+    font-size: 28px;
 }

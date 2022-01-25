@@ -14,16 +14,93 @@
     <body>
 
         <header id="head">
-            <a href="./highscores.html"><h2 id="scores">View high scores</h2></a>
-            <h2 id="timer">Time: 0</h2>
+            <nav>
+                <button type="button" id="highScoresBtn">View high scores</button>
+            </nav>
+            <div id="timerDisplay">Time: <span id="timerValue">0</span></div>
         </header>
 
-        <!-- JS will create most of the HTML -->
+        <!-- Defining most of the content within HTML now to avoid issues -->
         <main>
-
-            <section id="quizarea">
+            <section id="intro">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit.<br> 
+                Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <button type="button" id="startBtn">Start Quiz</button>
+            </section>
+            
+            <!-- JS will advance to the questions by showing/hiding the appropriate HTML -->
+            <section class="quizPage" id="page1" name="1" value="3" hidden>
+                <h2>Commonly used data types DO NOT include:</h2>
+                <button type="button" class="answerBtn" value="1">1. strings</button><br>
+                <button type="button" class="answerBtn" value="2">2. boolean</button><br>
+                <button type="button" class="answerBtn" value="3">3. alerts</button><br>
+                <button type="button" class="answerBtn" value="4">4. numbers</button>
+            </section>
+    
+            <section class="quizPage" id="page2" name="2" value="3" hidden>
+                <h2>The condition in an if / else statement is enclosed with _____.</h2>
+                <button type="button" class="answerBtn" value="1">1. quotes</button><br>
+                <button type="button" class="answerBtn" value="2">2. curly braces</button><br>
+                <button type="button" class="answerBtn" value="3">3. parentheses</button><br>
+                <button type="button" class="answerBtn" value="4">4. square brackets</button>            
+            </section>
+    
+            <section class="quizPage" id="page3" name="3" value="4" hidden>
+                <h2>Arrays in JavaScript can be used to store _____.</h2>
+                <button type="button" class="answerBtn" value="1">1. numbers and strings</button><br>
+                <button type="button" class="answerBtn" value="2">2. other arrays</button><br>
+                <button type="button" class="answerBtn" value="3">3. booleans</button><br>
+                <button type="button" class="answerBtn" value="4">4. all of the above</button>            
+            </section>
+    
+            <section class="quizPage" id="page4" name="4" value="3" hidden>
+                <h2>String values must be enclosed within _____ when being assigned to variables.</h2>
+                <button type="button" class="answerBtn" value="1">1. commas</button><br>
+                <button type="button" class="answerBtn" value="2">2. curly braces</button><br>
+                <button type="button" class="answerBtn" value="3">3. quotes</button><br>
+                <button type="button" class="answerBtn" value="4">4. parentheses</button>            
+            </section>
+    
+            <section class="quizPage" id="page5" name="5" value="4" hidden>
+                <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+                <button type="button" class="answerBtn" value="1">1. JavaScript</button><br>
+                <button type="button" class="answerBtn" value="2">2. terminal/bash</button><br>
+                <button type="button" class="answerBtn" value="3">3. for loops</button><br>
+                <button type="button" class="answerBtn" value="4">4. console.log</button>            
             </section>
 
+            <!-- And the finish page goes here -->
+            <section id="complete" name="6" hidden>
+                <h1>All done!</h1>
+                <p>Your final score is <span id="finalScore">0</span>.</p>
+                <label for="initials">Enter initials:</label>
+                <input type="text" maxlength="3" id="initials" name="initials">
+                <button type="submit" id="initialsBtn">Submit</button>
+            </section>
+
+            <!-- Show/hide these sections based upon correctness of response-->
+            <section id="correct" hidden>
+                <br>
+                <hr>
+                <h3>Correct!</h3>
+            </section>
+    
+            <section id="incorrect" hidden>
+                <br>
+                <hr>
+                <h3>Wrong!</h3>
+            </section>
+            
+            <!-- Dumped separate highscores.html for simplicity's sake, handling it like the rest of this now -->
+            <section id="highscores" hidden>
+                <h1>High scores</h1>
+
+                <ol id="highscoreList"></ol>
+
+                <button type="button" id="backBtn">Go Back</button>
+                <button type="reset" id="clearScoresBtn">Clear high scores</button>
+            </section>
         </main>
 
         <!-- Pulling in JavaScript-->
