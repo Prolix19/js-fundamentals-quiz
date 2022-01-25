@@ -35,7 +35,7 @@ button {
 
 /* Override styling on the "View high scores" button */
 #highScoresBtn {
-    color: rgb(100, 0, 140);
+    color: #4B3570;
     background-color: white;
     border: none;
     font-size: 24px;
